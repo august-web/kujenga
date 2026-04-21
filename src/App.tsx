@@ -53,6 +53,7 @@ function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<LandingPage />} />
+            <Route path="/courses" element={<CoursesPage />} />
             <Route 
               path="/login" 
               element={
@@ -76,14 +77,6 @@ function App() {
               element={
                 <ProtectedRoute>
                   <DashboardPage />
-                </ProtectedRoute>
-              } 
-            />
-            <Route 
-              path="/courses" 
-              element={
-                <ProtectedRoute>
-                  <CoursesPage />
                 </ProtectedRoute>
               } 
             />
