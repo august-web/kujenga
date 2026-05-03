@@ -18,7 +18,6 @@ export const LoginPage: React.FC = () => {
     setError('');
     setIsLoading(true);
 
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     const success = login(email, password);
@@ -35,70 +34,70 @@ export const LoginPage: React.FC = () => {
       <div className="w-full max-w-md">
         <div className="text-center">
           <Logo size="md" className="mx-auto mb-6 justify-center" />
-          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Welcome back!</h1>
-          <p className="mt-2 text-[var(--text-secondary)]">Sign in to continue your journey</p>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Welcome back</h1>
+          <p className="mt-2 text-[var(--text-secondary)]">Login to access your NSAYƐ dashboard.</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-5">
           {error && (
             <div className="rounded-lg bg-red-50 p-4 text-sm text-red-600 dark:bg-red-900/30 dark:text-red-400">
               {error}
             </div>
           )}
 
-          <div className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-[var(--text-secondary)]">
-                Email address
-              </label>
-              <div className="relative mt-1">
-                <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--text-muted)]" />
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="input-field w-full rounded-xl py-3 pl-10 pr-4"
-                  placeholder="you@example.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-[var(--text-secondary)]">
-                Password
-              </label>
-              <div className="relative mt-1">
-                <Lock className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--text-muted)]" />
-                <input
-                  id="password"
-                  type={showPassword ? 'text' : 'password'}
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="input-field w-full rounded-xl py-3 pl-10 pr-12"
-                  placeholder="••••••••"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
-                >
-                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                </button>
-              </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-[var(--text-secondary)]">
+              Email or Phone
+            </label>
+            <div className="relative mt-1">
+              <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--text-muted)]" />
+              <input
+                id="email"
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="input-field w-full rounded-xl py-3 pl-10 pr-4"
+                placeholder="you@example.com"
+              />
             </div>
           </div>
 
-          <div className="flex items-center justify-between">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" className="h-4 w-4 rounded border-[var(--border-color)] text-primary-600 focus:ring-primary-500" />
-              <span className="text-sm text-[var(--text-secondary)]">Remember me</span>
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-[var(--text-secondary)]">
+              Password
             </label>
-            <a href="#" className="text-sm font-medium text-primary-600 hover:text-primary-700">
-              Forgot password?
-            </a>
+            <div className="relative mt-1">
+              <Lock className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-[var(--text-muted)]" />
+              <input
+                id="password"
+                type={showPassword ? 'text' : 'password'}
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="input-field w-full rounded-xl py-3 pl-10 pr-12"
+                placeholder="••••••••"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
+            <div className="mt-1 text-right">
+              <a href="#" className="text-sm font-medium text-primary-600 hover:text-primary-700">
+                Forgot password?
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <input type="checkbox" id="remember" className="h-4 w-4 rounded border-[var(--border-color)] text-primary-600 focus:ring-primary-500" />
+            <label htmlFor="remember" className="text-sm text-[var(--text-secondary)]">
+              Keep me logged in on this device
+            </label>
           </div>
 
           <button
@@ -110,33 +109,28 @@ export const LoginPage: React.FC = () => {
               <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
             ) : (
               <>
-                Sign In
+                Login
                 <ArrowRight size={20} />
               </>
             )}
           </button>
 
-          <p className="text-center text-sm text-[var(--text-secondary)]">
-            Don't have an account?{' '}
-            <Link to="/register" className="font-medium text-primary-600 hover:text-primary-700">
-              Create one now
-            </Link>
-          </p>
-        </form>
-
-        <div className="mt-8">
-          <div className="relative">
+          <div className="relative py-4">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-[var(--border-color)]"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="bg-[var(--bg-primary)] px-4 text-[var(--text-muted)]">Demo credentials</span>
+              <span className="bg-[var(--bg-primary)] px-4 text-[var(--text-muted)]">or</span>
             </div>
           </div>
-          <div className="mt-4 rounded-lg bg-[var(--bg-secondary)] p-4 text-sm text-[var(--text-secondary)]">
-            <p>Use any email and password to login. The system will create a demo user for you.</p>
-          </div>
-        </div>
+
+          <p className="text-center text-sm text-[var(--text-secondary)]">
+            New to NSAYƐ?{' '}
+            <Link to="/register" className="font-medium text-primary-600 hover:text-primary-700">
+              Create a new student account
+            </Link>
+          </p>
+        </form>
       </div>
     </div>
   );

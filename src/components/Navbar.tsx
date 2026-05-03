@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Sun, Moon, Bell, Menu, X, Home, BookOpen, Briefcase, 
+import {
+  Sun, Moon, Bell, Menu, X, Home, BookOpen, Briefcase,
   Wallet, User, LogOut, ChevronDown, Check, CheckCheck
 } from 'lucide-react';
 import { useStore } from '../store/useStore';
@@ -19,13 +19,11 @@ export const Navbar: React.FC = () => {
   const unreadCount = notifications.filter(n => !n.read).length;
 
   const navLinks = [
-    { to: '/dashboard', label: 'Dashboard', icon: Home },
-    { to: '/courses', label: 'Learn', icon: BookOpen },
+    { to: '/', label: 'Home', icon: Home },
+    { to: '/courses', label: 'Programs', icon: BookOpen },
     { to: '/jobs', label: 'Jobs', icon: Briefcase },
-    { to: '/wallet', label: 'Wallet', icon: Wallet },
   ];
 
-  // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (notifRef.current && !notifRef.current.contains(event.target as Node)) {
@@ -54,7 +52,7 @@ export const Navbar: React.FC = () => {
     const minutes = Math.floor(diff / 60000);
     const hours = Math.floor(diff / 3600000);
     const days = Math.floor(diff / 86400000);
-    
+
     if (minutes < 1) return 'Just now';
     if (minutes < 60) return `${minutes}m ago`;
     if (hours < 24) return `${hours}h ago`;
@@ -65,38 +63,58 @@ export const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 border-b border-[var(--border-color)] bg-[var(--bg-primary)]/95 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <Logo size="sm" />
           </Link>
 
-          {/* Desktop Navigation */}
-          {isAuthenticated && (
-            <div className="hidden md:flex md:items-center md:gap-1">
-              {navLinks.map((link) => {
-                const Icon = link.icon;
-                const isActive = location.pathname === link.to;
-                return (
-                  <Link
-                    key={link.to}
-                    to={link.to}
-                    className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
-                      isActive
-                        ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                        : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]'
-                    }`}
-                  >
-                    <Icon size={18} />
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </div>
-          )}
+          <div className="hidden md:flex md:items-center md:gap-1">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              const isActive = location.pathname === link.to;
+              return (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                    isActive
+                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
+                      : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]'
+                  }`}
+                >
+                  <Icon size={18} />
+                  {link.label}
+                </Link>
+              );
+            })}
+            {isAuthenticated && (
+              <>
+                <Link
+                  to="/dashboard"
+                  className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                    location.pathname === '/dashboard'
+                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
+                      : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]'
+                  }`}
+                >
+                  <Home size={18} />
+                  Dashboard
+                </Link>
+                <Link
+                  to="/wallet"
+                  className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-colors ${
+                    location.pathname === '/wallet'
+                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
+                      : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]'
+                  }`}
+                >
+                  <Wallet size={18} />
+                  Wallet
+                </Link>
+              </>
+            )}
+          </div>
 
-          {/* Right side actions */}
           <div className="flex items-center gap-2">
-            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="rounded-lg p-2 text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
@@ -107,7 +125,6 @@ export const Navbar: React.FC = () => {
 
             {isAuthenticated ? (
               <>
-                {/* Notifications */}
                 <div className="relative" ref={notifRef}>
                   <button
                     onClick={() => setNotificationsOpen(!notificationsOpen)}
@@ -173,7 +190,6 @@ export const Navbar: React.FC = () => {
                   )}
                 </div>
 
-                {/* Profile Dropdown */}
                 <div className="relative" ref={profileRef}>
                   <button
                     onClick={() => setProfileOpen(!profileOpen)}
@@ -232,7 +248,6 @@ export const Navbar: React.FC = () => {
                   )}
                 </div>
 
-                {/* Mobile Menu Button */}
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   className="rounded-lg p-2 text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)] md:hidden"
@@ -246,21 +261,20 @@ export const Navbar: React.FC = () => {
                   to="/login"
                   className="rounded-lg px-4 py-2 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
                 >
-                  Sign In
+                  Login
                 </Link>
                 <Link
                   to="/register"
                   className="btn-primary rounded-lg px-4 py-2 text-sm font-medium"
                 >
-                  Get Started
+                  Create Account
                 </Link>
               </div>
             )}
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isAuthenticated && mobileMenuOpen && (
+        {mobileMenuOpen && (
           <div className="border-t border-[var(--border-color)] py-2 md:hidden">
             {navLinks.map((link) => {
               const Icon = link.icon;
@@ -281,6 +295,26 @@ export const Navbar: React.FC = () => {
                 </Link>
               );
             })}
+            {isAuthenticated && (
+              <>
+                <Link
+                  to="/dashboard"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
+                >
+                  <Home size={20} />
+                  Dashboard
+                </Link>
+                <Link
+                  to="/wallet"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
+                >
+                  <Wallet size={20} />
+                  Wallet
+                </Link>
+              </>
+            )}
           </div>
         )}
       </div>

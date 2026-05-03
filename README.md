@@ -1,36 +1,40 @@
-# Kujenga
+# NSAYƐ
 
-> Empowering African Communities Through Skills, Jobs, and Economic Opportunities
+> Connecting Skills with Opportunities Across Africa
 
-Kujenga is a comprehensive digital platform designed to bridge the skills gap and create economic opportunities for individuals across Africa. The platform enables users to learn new skills through curated courses, find employment opportunities ranging from instant gigs to formal jobs, and manage their earnings through a built-in digital wallet system.
+NSAYƐ is a comprehensive digital platform designed to bridge the skills gap and create economic opportunities for individuals across Africa. The platform enables users to discover programs and training, find employment opportunities ranging from TVET roles to digital jobs, and manage their careers through a unified platform — by ProjEvent Technologies.
 
 ## 🌟 Features
 
-### 📚 Learn & Earn
-- Access free and premium courses across multiple categories:
-  - **Technology**: Web Development, Mobile Apps, Cloud Computing
-  - **Green Economy**: Solar Energy, Sustainable Practices
-  - **Digital Services**: Freelance Writing, Content Creation
-  - **Business Skills**: Entrepreneurship, Management
-  - **Agriculture**: Modern Farming, Agribusiness
+### 📚 Programs & Training
+- Access courses and training across multiple categories:
+  - **Technical & Vocational (TVET)**: Electricians, welders, mechanics, refrigeration
+  - **Digital & Tech**: Developers, designers, IT support, digital marketing
+  - **Business & Admin**: Office admins, operations, customer service
+  - **Marketing & Creative**: Content creators, social media, graphics
+  - **Healthcare**: Nurses, assistants, lab tech, community health
+  - **Hospitality**: Hotels, restaurants, tourism, events
+  - **Freelance / Remote**: Remote projects across Africa & global clients
+  - **Engineering & Construction**: Civil, mechanical, site workers
 
 - Track learning progress with interactive modules
-- Earn recognized certificates upon course completion
-- Build your professional profile and portfolio
+- Earn certificates upon course completion
+- Build your NSAYƐ profile showcasing your strengths
 
 ### 💼 Jobs & Opportunities
-- **Instant Gigs**: Quick, short-term opportunities
-- **Formal Jobs**: Full-time and part-time positions
-- **Project Bids**: Flexible project-based work
+- **Full-time Positions**: Stable roles with benefits
+- **Part-time & Internships**: Flexible opportunities
+- **Apprenticeships**: Hands-on learning with earning
+- **Contract / Project**: Short-term engagements
+- **Remote Work**: Flexible location-independent roles
 - Real-time job notifications and alerts
 - Application tracking and status updates
-- Direct communication with employers
+- Only verified employers and opportunities
 
 ### 💰 Digital Wallet
 - Secure payment system for job earnings
 - Transaction history and financial tracking
-- Kujenga Credit Score system for better opportunities
-- Multiple payment methods support
+- NSAYƐ Credit Score system for better opportunities
 - Transparent fee structure
 
 ### 👤 User Profiles
@@ -42,7 +46,7 @@ Kujenga is a comprehensive digital platform designed to bridge the skills gap an
 
 ### 🎯 Dashboard
 - Personalized dashboard with key metrics
-- Quick access to courses, jobs, and wallet
+- Quick access to programs, jobs, and wallet
 - Real-time notifications
 - Activity timeline and insights
 
@@ -72,22 +76,18 @@ Kujenga is a comprehensive digital platform designed to bridge the skills gap an
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/kujenga.git
-   cd kujenga
+   git clone https://github.com/yourusername/nsaye.git
+   cd nsaye
    ```
 
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. **Start the development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
 4. **Open in browser**
@@ -133,11 +133,11 @@ The application implements both public and protected routes:
 - **Public Routes**:
   - `/` - Landing page
   - `/login` - User login
-  - `/register` - New user registration
+  - `/register` - New user registration (3-step profile creation)
+  - `/courses` - Browse programs and training
 
 - **Protected Routes** (requires authentication):
   - `/dashboard` - User dashboard
-  - `/courses` - Browse and manage courses
   - `/jobs` - Browse job opportunities
   - `/wallet` - Manage earnings and transactions
   - `/profile` - User profile management
@@ -145,20 +145,20 @@ The application implements both public and protected routes:
 ## 📊 Data Models
 
 ### User
-- Profile information (name, email, phone, location)
+- Profile information (name, email, phone, location, country)
 - Role: learner, worker, or employer
 - Skills and verification status
 - Wallet balance and credit score
 - Profile image
 
-### Courses
-- Multi-category course system
+### Programs / Courses
+- Multi-category training system
 - Module-based learning structure
 - Course descriptions and duration
 - Enrollment tracking and progress
 
 ### Jobs
-- Multiple job types (instant, formal, bid)
+- Multiple job types (full-time, part-time, internship, apprenticeship, contract, remote)
 - Location and payment information
 - Employer verification system
 - Application management
@@ -180,7 +180,7 @@ The application uses Tailwind CSS with custom configuration:
 
 - Responsive design for all device sizes
 - Dark mode support with CSS variables
-- Custom color schemes and themes
+- Custom indigo/orange color scheme matching the NSAYƐ brand
 - Optimized component styling with `clsx` and `tailwind-merge`
 
 ## 🔄 State Management
@@ -217,18 +217,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Team
 
-Kujenga is built by a passionate team dedicated to empowering communities across Africa through technology and education.
+NSAYƐ is built by ProjEvent Technologies — a passionate team dedicated to empowering communities across Africa through technology, skills development, and real opportunities.
 
 ## 🤝 Support
 
-For support, please open an issue on GitHub or contact our support team.
-
-## 🔗 Links
-
-- **Website**: [kujenga.io](https://kujenga.io)
-- **Documentation**: [docs.kujenga.io](https://docs.kujenga.io)
-- **Community**: [community.kujenga.io](https://community.kujenga.io)
+For support, please open an issue on GitHub or contact our team:
+- Email: cytech73@gmail.com
+- WhatsApp / Call: +233 24 406 3717
 
 ---
 
-**Made with ❤️ to empower African communities**
+**NSAYƐ — Connecting Skills with Opportunities Across Africa**
+**Designed & powered by ProjEvent Technologies**

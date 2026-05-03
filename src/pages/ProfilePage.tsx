@@ -242,7 +242,7 @@ export const ProfilePage: React.FC = () => {
       {/* Credit Score Card */}
       <div className="mt-6 card rounded-2xl p-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)]">Kujenga Credit Score</h2>
+          <h2 className="text-lg font-semibold text-[var(--text-primary)]">NSAYƐ Credit Score</h2>
           <div className="flex items-center gap-2">
             <Shield size={20} className="text-primary-500" />
             <span className="text-2xl font-bold text-primary-600">{user?.creditScore}</span>

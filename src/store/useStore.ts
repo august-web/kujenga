@@ -297,7 +297,7 @@ export const useStore = create<AppState>()(
         // Add welcome notification
         get().addNotification({
           userId: newUser.id,
-          title: 'Welcome to Kujenga! 🎉',
+          title: 'Welcome to NSAYƐ! 🎉',
           message: 'You have received KES 100 as a welcome bonus. Start learning and earning today!',
           type: 'success'
         });
@@ -496,7 +496,7 @@ export const useStore = create<AppState>()(
       clearNotifications: () => set({ notifications: [] })
     }),
     {
-      name: 'kujenga-storage',
+      name: 'nsaye-storage',
       partialize: (state) => ({ 
         theme: state.theme,
         user: state.user,

@@ -76,7 +76,7 @@ export const DashboardPage: React.FC = () => {
         {/* Credit Score */}
         <div className="card rounded-2xl p-6">
           <div className="flex items-center justify-between">
-            <h3 className="font-semibold text-[var(--text-primary)]">Kujenga Credit Score</h3>
+            <h3 className="font-semibold text-[var(--text-primary)]">NSAYƐ Credit Score</h3>
             <TrendingUp size={20} className="text-primary-500" />
           </div>
           <div className="mt-4">

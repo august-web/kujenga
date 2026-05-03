@@ -76,7 +76,7 @@ export const Logo: React.FC<LogoProps> = ({ size = 'md', showText = true, classN
       {showText && (
         <div className="flex flex-col">
           <span className={`font-bold ${currentSize.text} gradient-text leading-tight`}>
-            KUJENGA
+            NSAYƐ
           </span>
           {size === 'lg' && (
             <span className="text-xs text-[var(--text-muted)]">Build Skills. Earn Daily.</span>
