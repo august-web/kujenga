@@ -68,8 +68,8 @@ export const LandingPage: React.FC = () => {
       <section className="relative overflow-hidden hero-gradient">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-earth-50 px-4 py-2 text-sm font-medium text-earth-700 dark:bg-earth-900/30 dark:text-earth-300">
-              <span className="flex h-2 w-2 rounded-full bg-earth-500"></span>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-primary-500 bg-white px-4 py-2 text-sm font-bold text-primary-700 shadow-md">
+              <span className="flex h-2 w-2 rounded-full bg-primary-500 animate-pulse"></span>
               By ProjEvent Technologies
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-6xl">
@@ -256,34 +256,34 @@ export const LandingPage: React.FC = () => {
             </div>
 
             <div className="rounded-2xl border border-[var(--border-color)] bg-[var(--card-bg)] p-8 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-earth-100 dark:bg-earth-900/30">
-                <Building2 size={24} className="text-earth-600" />
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/30">
+                <Building2 size={24} className="text-primary-600" />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-[var(--text-primary)]">For Employers & Partners</h3>
               <p className="mb-4 text-sm text-[var(--text-muted)]">SMEs, corporates, NGOs & projects.</p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
-                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-earth-500" />
+                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-primary-500" />
                   Post roles and describe the skills you need.
                 </li>
                 <li className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
-                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-earth-500" />
+                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-primary-500" />
                   Access a pre-screened pool of talent across TVET, digital, creative & admin.
                 </li>
                 <li className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
-                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-earth-500" />
+                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-primary-500" />
                   Shortlist, contact, and schedule interviews faster.
                 </li>
                 <li className="flex items-start gap-3 text-sm text-[var(--text-secondary)]">
-                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-earth-500" />
-                  Need help? Contact the NSAYƐ team to post jobs on your behalf.
+                  <ArrowRight size={16} className="mt-0.5 flex-shrink-0 text-primary-500" />
+                  Need help? Contact the NSAY team to post jobs on your behalf.
                 </li>
               </ul>
               <Link
                 to="/register"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl border-2 border-earth-500 bg-earth-50 px-6 py-3 text-sm font-semibold text-earth-700 transition-colors hover:bg-earth-100 dark:bg-earth-900/20 dark:text-earth-400"
+                className="btn-primary mt-6 inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold"
               >
-                Hire through NSAYƐ
+                Hire through NSAY
                 <ArrowRight size={18} />
               </Link>
             </div>
@@ -399,7 +399,7 @@ export const LandingPage: React.FC = () => {
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   to="/register"
-                  className="flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-semibold text-earth-800 transition-colors hover:bg-earth-50"
+                  className="flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-lg font-bold text-primary-700 shadow-lg transition-colors hover:bg-primary-50"
                 >
                   Create Free Account
                   <ArrowRight size={20} />
@@ -441,7 +441,7 @@ export const LandingPage: React.FC = () => {
             <div>
               <h4 className="font-semibold text-[var(--text-primary)]">Contact</h4>
               <ul className="mt-4 space-y-2 text-sm text-[var(--text-secondary)]">
-                <li>Email: <a href="mailto:cytech73@gmail.com" className="text-primary-600 hover:text-primary-700">cytech73@gmail.com</a></li>
+                <li>Email: <a href="mailto:info@projevent.net" className="text-primary-600 hover:text-primary-700">info@projevent.net</a></li>
                 <li>Phone / WhatsApp: <a href="tel:+233244063717" className="text-primary-600 hover:text-primary-700">+233 24 406 3717</a></li>
               </ul>
               <div className="mt-4 flex gap-3">

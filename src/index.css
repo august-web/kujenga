@@ -88,13 +88,15 @@ body {
 }
 
 .btn-secondary {
-  background-color: var(--bg-tertiary);
+  background-color: var(--bg-secondary);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
+  font-weight: 600;
 }
 
 .btn-secondary:hover {
   background-color: var(--border-color);
+  border-color: var(--text-secondary);
 }
 
 .notification-enter {

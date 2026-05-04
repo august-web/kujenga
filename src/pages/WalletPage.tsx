@@ -187,7 +187,7 @@ export const WalletPage: React.FC = () => {
               className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
                 filter === 'all'
                   ? 'bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400'
-                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]'
+                  : 'text-[var(--text-primary)] font-medium hover:bg-[var(--bg-secondary)]'
               }`}
             >
               All
@@ -197,7 +197,7 @@ export const WalletPage: React.FC = () => {
               className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
                 filter === 'credit'
                   ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]'
+                  : 'text-[var(--text-primary)] font-medium hover:bg-[var(--bg-secondary)]'
               }`}
             >
               Income
@@ -207,7 +207,7 @@ export const WalletPage: React.FC = () => {
               className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
                 filter === 'debit'
                   ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]'
+                  : 'text-[var(--text-primary)] font-medium hover:bg-[var(--bg-secondary)]'
               }`}
             >
               Expenses

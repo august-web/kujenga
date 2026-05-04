@@ -222,7 +222,7 @@ NSAYƐ is built by ProjEvent Technologies — a passionate team dedicated to emp
 ## 🤝 Support
 
 For support, please open an issue on GitHub or contact our team:
-- Email: cytech73@gmail.com
+- Email: info@projevent.net
 - WhatsApp / Call: +233 24 406 3717
 
 ---

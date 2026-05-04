@@ -340,7 +340,7 @@ export const RegisterPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] px-6 py-3 font-semibold text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-secondary)]"
+                  className="btn-secondary flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold"
                 >
                   <ArrowLeft size={20} />
                   Back
@@ -429,7 +429,7 @@ export const RegisterPage: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border-color)] bg-[var(--bg-primary)] px-6 py-3 font-semibold text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-secondary)]"
+                  className="btn-secondary flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold"
                 >
                   <ArrowLeft size={20} />
                   Back
