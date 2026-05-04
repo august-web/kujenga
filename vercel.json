@@ -4,5 +4,8 @@
   "installCommand": "npm ci --prefer-offline --no-audit",
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
